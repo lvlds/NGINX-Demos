@@ -20,8 +20,8 @@ RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
 EXPOSE 80 443
 
-ENV CT_URL https://releases.hashicorp.com/consul-template/0.15.0/consul-template_0.15.0_linux_amd64.zip
-RUN curl -O $CT_URL && unzip consul-template_0.15.0_linux_amd64.zip -d /usr/local/bin
+ENV CT_URL https://releases.hashicorp.com/consul-template/0.19.5/consul-template_0.19.5_linux_amd64.zip
+RUN curl -O $CT_URL && unzip consul-template_0.19.5_linux_amd64.zip -d /usr/local/bin
 
 ADD nginx.service /etc/service/nginx/run
 ADD consul-template.service /etc/service/consul-template/run
